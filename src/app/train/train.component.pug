@@ -1,0 +1,11 @@
+svg:g
+    svg:text(dy='0.35em')
+        | Train {{ i }}
+    svg:text(dy='0.35em', [attr.transform]="'translate(100 0)'")
+        | Length: {{ data.length }}
+    svg:text(dy='0.35em', [attr.transform]="'translate(250 0)'")
+        | Speed: {{ data.speed }}
+
+svg:g([attr.transform]="'translate(' + (offset + length) + ' 50)'")
+    svg:g(app-locomotive)
+    svg:g(app-wagon, *ngFor="let dummy of ' '.repeat(data.length).split(''); let i = index", [attr.transform]="'translate(-' + (100 * i) + ' 0)'")

@@ -9,13 +9,21 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MainD3Component } from './main-d3/main-d3.component';
 import { PieChartDemoComponent } from './pie-chart-demo/pie-chart-demo.component';
+import { TrainsComponent } from './trains/trains.component';
+import { TrainComponent } from './train/train.component';
+import { LocomotiveComponent } from './locomotive/locomotive.component';
+import { WagonComponent } from './wagon/wagon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     MainD3Component,
-    PieChartDemoComponent
+    PieChartDemoComponent,
+    TrainsComponent,
+    TrainComponent,
+    LocomotiveComponent,
+    WagonComponent
   ],
   imports: [
     BrowserModule,
