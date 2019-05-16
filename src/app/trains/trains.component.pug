@@ -1,3 +1,5 @@
+div
+    button(mat-raised-button, color="primary", (click)="addTrain()") Add Train
 svg([attr.width]='width', [attr.height]='height')
-    g(*ngFor='let train of trainsData; let i = index', [attr.transform]="'translate(0 ' + (20 + (i * spacing)) + ')'")
-        g(app-train, [data]='train', [i]='i+1')
+    svg:g(*ngFor='let train of trainsData; let i = index', [attr.transform]="'translate(0 ' + (40 + (i * spacing)) + ')'")
+        svg:g(app-train, [data]='train', [i]='i+1')

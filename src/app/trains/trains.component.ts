@@ -11,18 +11,23 @@ export class TrainsComponent implements OnInit {
 
     public trainsData: Array<TrainData> = [
         { length: 5, speed: 10 },
-        { length: 7, speed: 5 },
-        { length: 3, speed: 15 },
     ];
 
     public width = 1000;
-    public height = 500;
-    public spacing = 150;
+    public height = 1000;
+    public spacing = 170;
 
     constructor() { }
 
     ngOnInit() {
         this.trainsData = this.trainsData.map(train => ({...train, width: this.width}));
+    }
+
+    addTrain() {
+        this.trainsData.push({
+            length: (Math.round(Math.random() * 6) + 1),
+            speed: (Math.round(Math.random() * 14) + 1),
+            width: this.width });
     }
 
 }

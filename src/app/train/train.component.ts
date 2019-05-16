@@ -31,4 +31,8 @@ export class TrainComponent implements OnInit, AfterViewInit {
             }
         });
     }
+
+    changedLength() {
+        this.length = (100 * (this.data.length - 1));
+    }
 }

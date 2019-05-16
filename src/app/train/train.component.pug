@@ -1,10 +1,38 @@
-svg:g
+svg:g([attr.transform]="'translate(20 0)'")
     svg:text(dy='0.35em')
-        | Train {{ i }}
-    svg:text(dy='0.35em', [attr.transform]="'translate(100 0)'")
-        | Length: {{ data.length }}
-    svg:text(dy='0.35em', [attr.transform]="'translate(250 0)'")
-        | Speed: {{ data.speed }}
+        | Train {{ i }} :
+    svg:g([attr.transform]="'translate(100 -30)'")
+        foreignObject(width="200px", height="100px")
+            xhtml:mat-form-field
+                xhtml:mat-label Length
+                xhtml:mat-select([(value)]="data.length", (valueChange)="changedLength()")
+                    xhtml:mat-option([value]="1") 1
+                    xhtml:mat-option([value]="2") 2
+                    xhtml:mat-option([value]="3") 3
+                    xhtml:mat-option([value]="4") 4
+                    xhtml:mat-option([value]="5") 5
+                    xhtml:mat-option([value]="6") 6
+                    xhtml:mat-option([value]="7") 7
+    svg:g([attr.transform]="'translate(350 -30)'")
+        foreignObject(width="200px", height="100px")
+            xhtml:mat-form-field
+                xhtml:mat-label Speed
+                xhtml:mat-select([(value)]="data.speed")
+                    xhtml:mat-option([value]="1") 1
+                    xhtml:mat-option([value]="2") 2
+                    xhtml:mat-option([value]="3") 3
+                    xhtml:mat-option([value]="4") 4
+                    xhtml:mat-option([value]="5") 5
+                    xhtml:mat-option([value]="6") 6
+                    xhtml:mat-option([value]="7") 7
+                    xhtml:mat-option([value]="8") 8
+                    xhtml:mat-option([value]="9") 9
+                    xhtml:mat-option([value]="10") 10
+                    xhtml:mat-option([value]="11") 11
+                    xhtml:mat-option([value]="12") 12
+                    xhtml:mat-option([value]="13") 13
+                    xhtml:mat-option([value]="14") 14
+                    xhtml:mat-option([value]="15") 15
 
 svg:g([attr.transform]="'translate(' + (offset + length) + ' 50)'")
     svg:g(app-locomotive)
