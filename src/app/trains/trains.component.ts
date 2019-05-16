@@ -11,8 +11,8 @@ export class TrainsComponent implements OnInit {
 
     public trainsData: Array<TrainData> = [
         { length: 5, speed: 10 },
-        { length: 7, speed: 4 },
-        { length: 3, speed: 18 },
+        { length: 7, speed: 5 },
+        { length: 3, speed: 15 },
     ];
 
     public width = 1000;

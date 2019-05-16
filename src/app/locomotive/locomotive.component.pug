@@ -15,6 +15,4 @@ svg:g(transform='matrix(0.292547, 0, 0, 0.292547, -54.6363, -111.465)')
         svg:circle(cx='497.167', cy='619.167', r='13.9284')
         svg:rect(x='411.167', y='471.167', width='63', height='58')
     svg:g.locomotive-smoke
-        svg:circle(cx='470', cy='360', r='14')
-        svg:circle(cx='430', cy='320', r='24')
-        svg:circle(cx='360', cy='300', r='30')
+        svg:circle(*ngFor="let smoke of smokes", [attr.cx]='470 - smoke.x', [attr.cy]='360 - smoke.y', [attr.r]='14 + smoke.r', [style.opacity]='smoke.o')

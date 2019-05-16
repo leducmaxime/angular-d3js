@@ -27,7 +27,7 @@ export class TrainComponent implements OnInit, AfterViewInit {
         counter.subscribe(n => {
             this.offset += this.data.speed;
             if (this.offset > this.data.width) {
-                this.offset = -this.length - 100;
+                this.offset = 0;
             }
         });
     }

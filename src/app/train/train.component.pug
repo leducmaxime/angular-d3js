@@ -9,3 +9,7 @@ svg:g
 svg:g([attr.transform]="'translate(' + (offset + length) + ' 50)'")
     svg:g(app-locomotive)
     svg:g(app-wagon, *ngFor="let dummy of ' '.repeat(data.length).split(''); let i = index", [attr.transform]="'translate(-' + (100 * i) + ' 0)'")
+
+svg:g([attr.transform]="'translate(' + (offset + length - data.width) + ' 50)'")
+    svg:g(app-locomotive)
+    svg:g(app-wagon, *ngFor="let dummy of ' '.repeat(data.length).split(''); let i = index", [attr.transform]="'translate(-' + (100 * i) + ' 0)'")
